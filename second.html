@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سنة حب - ذكرى سنتنا الأولى</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="romantic-container second-page">
+        <div class="content">
+            
+            <!-- عنوان الصفحة -->
+            <h1>✨ سنة كاملة حب ✨</h1>
+            
+            <!-- التايمر (العد التنازلي من 1/3/2025) -->
+            <div class="timer-container">
+                <div id="timer" class="timer">...</div>
+                <p class="timer-label">مضى على حبنا</p>
+            </div>
+            
+            <!-- فيديو يوتيوب (يشتغل تلقائياً) -->
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/450p7goxZqg?autoplay=1&mute=1&loop=1&playlist=450p7goxZqg" 
+                    title="فيديو الذكرى" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+                <p class="video-caption">🎵 أغنية حبنا 🎵</p>
+            </div>
+            
+            <!-- النص الرومانسي -->
+            <div class="love-letter">
+                <p>
+                    "سنة كاملة عدّت على حبنا<br>
+                    سنة وأنا كل يوم بكتشف فيكي حاجة جديدة<br>
+                    سنة وإنتِ مش بس حبيبتي…<br>
+                    إنتِ الأمان اللي بلجأله، والضحكة اللي بترجعلي روحي، والحلم اللي بقيت عايش عشانه<br><br>
+                    
+                    أول سنة دي مش مجرد رقم…<br>
+                    دي 365 يوم مليانين تفاصيل، خناقات صغيرة أو كبيرة ضحكنا بعدها، وأيام عادية بقت مميزة بس عشان صوتك فيها<br><br>
+                    
+                    أنا ماحبيتش بس شكلك ولا كلامك…<br>
+                    أنا حبيت قلبك وطيبتك وطريقتك معايا، وغيرتك وخوفك عليّا، واهتمامك اللي دايمًا سابقني بخطوة<br>
+                    حبيت فيكي الإحساس اللي بيخليني أحس إني أهم واحد في الدنيا، حتى لو تقصّر في التعبير<br><br>
+                    
+                    سنة فاتت، بس الحقيقة إن إحساسي ناحيتك كل يوم بيكبر أكتر من اللي قبله<br>
+                    لو كانوا قالولي إن في حد هيغيّر حياتي بالشكل ده ماكنتش صدقت، بس إنتِ جيتي وغيّرتي كل حاجة<br>
+                    خليتي للحب معنى، وللوجود طعم، وللمستقبل شكل<br><br>
+                    
+                    وعد مني ليكي إن السنة دي تبقى مجرد البداية<br>
+                    بداية سنين أطول وأحلى وأقوى<br>
+                    مهما حصل ومهما الدنيا حاولت، أنا ثابت في اختياري ليكي، وثابت في حبي، وثابت إني عايز أكمل حياتي كلها وإنتِ معايا"
+                </p>
+            </div>
+            
+            <!-- القلب النابض -->
+            <div class="heart">❤️</div>
+            <p class="signature">كل سنة وإنتِ حب عمري</p>
+            
+        </div>
+    </div>
+
+    <!-- سكريبت التايمر -->
+    <script>
+        function updateTimer() {
+            // تاريخ البداية: 1 مارس 2025 (الساعة 00:00)
+            const startDate = new Date(2025, 2, 1); // ملاحظة: الشهر 2 = مارس (لأن الشهور من 0 إلى 11)
+            const now = new Date();
+            
+            // الفرق بالمللي ثانية
+            const diff = now - startDate;
+            
+            if (diff < 0) {
+                document.getElementById('timer').innerText = "لم يبدأ الحب بعد 💔";
+                return;
+            }
+            
+            // حساب الأيام والساعات والدقائق والثواني
+            const seconds = Math.floor(diff / 1000);
+            const days = Math.floor(seconds / (3600 * 24));
+            const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            
+            // تنسيق العرض
+            document.getElementById('timer').innerHTML = `
+                <span class="timer-number">${days}</span> يوم 
+                <span class="timer-number">${hours}</span> ساعة 
+                <span class="timer-number">${minutes}</span> دقيقة 
+                <span class="timer-number">${secs}</span> ثانية
+            `;
+        }
+        
+        // تحديث التايمر كل ثانية
+        setInterval(updateTimer, 1000);
+        // تشغيل أول مرة
+        updateTimer();
+    </script>
+</body>
+</html>

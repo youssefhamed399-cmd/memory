@@ -137,3 +137,100 @@ button:hover {
     padding-top: 20px;
     display: inline-block;
 }
+/* تنسيقات إضافية للصفحة الثانية */
+.second-page .content {
+    max-width: 900px;
+    width: 95%;
+}
+
+.timer-container {
+    background: rgba(0,0,0,0.3);
+    border-radius: 60px;
+    padding: 20px;
+    margin: 30px 0;
+    border: 2px solid #c9a87c;
+    box-shadow: 0 0 30px rgba(255,215,150,0.4);
+}
+
+.timer {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #f5d7b3;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.timer-number {
+    font-size: 3rem;
+    color: #ffd966;
+    margin: 0 5px;
+}
+
+.timer-label {
+    font-size: 1.3rem;
+    color: #ecd8c0;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 3px solid #c9a87c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    margin: 40px 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-caption {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 1rem;
+    border: 1px solid #f5d7b3;
+}
+
+.love-letter {
+    background: rgba(255, 245, 235, 0.08);
+    backdrop-filter: blur(5px);
+    padding: 30px 25px;
+    border-radius: 40px;
+    margin: 30px 0;
+    border: 1px solid #d4af7a;
+    text-align: right;
+    line-height: 2;
+    font-size: 1.4rem;
+    color: #f5e6d3;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+.love-letter p {
+    margin: 0;
+    white-space: pre-line; /* لكي تحترم الأسطر الجديدة */
+}
+
+@media (max-width: 600px) {
+    .timer {
+        font-size: 1.6rem;
+    }
+    .timer-number {
+        font-size: 2rem;
+    }
+    .love-letter {
+        font-size: 1.1rem;
+        padding: 20px 15px;
+    }
+    }

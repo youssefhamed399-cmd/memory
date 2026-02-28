@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكرى سنتنا الأولى</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- خطوط فاخرة -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="password-box">
+            <h1>✨ ذكرى حبنا الأولى ✨</h1>
+            <p>من فضلك أدخل كلمة المرور للدخول</p>
+            <input type="password" id="password" placeholder="كلمة المرور">
+            <button onclick="checkPassword()">دخول</button>
+            <div id="error" class="error"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const pwd = document.getElementById('password').value;
+            if (pwd === '103') {
+                window.location.href = 'second.html';
+            } else {
+                document.getElementById('error').innerText = '❌ كلمة مرور خاطئة، حاول مرة أخرى';
+            }
+        }
+    </script>
+</body>
+</html>

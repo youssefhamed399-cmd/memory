@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background: linear-gradient(145deg, #2c1a1a 0%, #4a2c2c 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5e6d3;
+}
+
+/* تنسيق صفحة القفل */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.password-box {
+    background: rgba(255, 245, 235, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid #c9a87c;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 2px #e4c9a9 inset;
+    max-width: 450px;
+    width: 90%;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #f5d7b3;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #ecd8c0;
+}
+
+input[type="password"] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 10px 0 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 1px solid #b48c5c;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="password"]:focus {
+    background: rgba(255,255,255,0.3);
+    border-color: #f5d7b3;
+    box-shadow: 0 0 15px #f5d7b3;
+}
+
+button {
+    background: linear-gradient(45deg, #b48c5c, #d4af7a);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    color: #2c1a1a;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border: 1px solid #efd6b5;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #d4af7a, #b48c5c);
+    box-shadow: 0 8px 20px rgba(255,215,150,0.6);
+}
+
+.error {
+    color: #ffa07a;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* تنسيق الصفحة الرومانسية */
+.romantic-container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50px;
+    margin: 20px;
+    border: 2px solid #c9a87c;
+    box-shadow: 0 0 50px rgba(255,215,150,0.3);
+}
+
+.content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.message {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 30px 0;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.heart {
+    font-size: 5rem;
+    animation: pulse 1.5s infinite;
+    margin: 20px 0;
+    color: #f5b7b1;
+    text-shadow: 0 0 20px #ff6b6b;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-top: 30px;
+    border-top: 2px solid #c9a87c;
+    padding-top: 20px;
+    display: inline-block;
+}
